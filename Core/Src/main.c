@@ -112,7 +112,8 @@ int main(void)
 		  break;
 	  default:
 		  var = 1;
-		  HAL_Delay(100);
+		  HAL_Delay(100); //modificacion
+		  HAL_Delay(200); //modificacion 2
 		  break;
 	  }
   }
