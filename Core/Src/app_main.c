@@ -11,3 +11,7 @@ void app_main(void){
 	HAL_Delay(500);
 }
 
+void app_read(void){
+	HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, RESET);
+	HAL_Delay(250);
+}

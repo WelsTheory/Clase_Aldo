@@ -86,7 +86,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+  char data = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -96,9 +96,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-	  HAL_Delay(250);
-	  app_main();
+	  if(data == 0){
+		  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+		  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD3_Pin);
+		  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD2_Pin);
+		  HAL_Delay(250);
+		  app_main();
+		  app_read();
+	  }
+	  else{
+
+	  }
+
   }
   /* USER CODE END 3 */
 }

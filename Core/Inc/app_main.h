@@ -12,4 +12,6 @@
 
 void app_main(void);
 
+void app_read(void);
+
 #endif /* INC_APP_MAIN_H_ */
