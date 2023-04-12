@@ -112,6 +112,7 @@ int main(void)
 		  break;
 	  default:
 		  var = 1;
+		  HAL_Delay(100);
 		  break;
 	  }
   }
